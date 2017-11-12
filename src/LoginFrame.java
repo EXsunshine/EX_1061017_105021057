@@ -11,7 +11,7 @@ public class LoginFrame extends JFrame{
     private JButton butEXIT = new JButton("EXIT");
     private Container  cp;
     private Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-    private int frmW=300,frmH=150, screenW = dim.width,screenH = dim.height;;
+    private int frmW=300,frmH=150, screenW = dim.width,screenH = dim.height;
     LoginFrame(){
         initComp();
     }
@@ -32,7 +32,7 @@ public class LoginFrame extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(texID.getText().equals("h304")&&new String((texPW.getPassword())).equals("852")){
-                    MainFrame mainFrame = new MainFrame();
+                    MainFrame mainFrame = new MainFrame(LoginFrame.this);
                     mainFrame.setVisible(true);
                     LoginFrame.this.setVisible(false);
                 }else{
